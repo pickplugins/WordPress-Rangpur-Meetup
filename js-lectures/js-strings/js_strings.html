@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js strings</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="my-5">JavaScript String</h2>
+
+            <h3 class="mb-3 mt-5 text-secondary">What is string in JavaScript?</h3>
+            <ul>
+                <li>The JavaScript string is an object that represents a sequence of characters.</li>
+                <li>JavaScript strings are used for storing and manipulating text.</li>
+            </ul>
+
+            <h3 class="mb-3 mt-5 text-secondary">How to create/write string?</h3>
+            <p>There are 2 ways to create string in JavaScript</p>
+
+            <ul>
+                <li>By string literal
+                <p>
+                    <code>
+                        var stringname = "string value";
+                    </code>
+                </p>
+                </li>
+                <li>By string object (using new keyword)
+                    <p>
+                        <code>
+                            var stringname = new String("string literal");
+                        </code>
+                    </p>
+                </li>
+            </ul>
+
+            <h3 class="mb-3 mt-5 text-secondary">Write the right way</h3>
+
+            <ul>
+                <li>JavaScript string is zero or more characters written inside quotes
+                    <p>
+                        <pre>
+var stringname = 0;
+var stringname = "";</pre>
+                    </p>
+                </li>
+                <li>You can use single or double quotes:
+                    <p class="text-left">
+                        <pre class="text-left">
+var carName1 = "Volvo XC60";  // Double quotes
+var carName2 = 'Volvo XC60';  // Single quotes</pre>
+                    </p>
+                </li>
+
+
+                <li>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+
+                    <p class="text-left">
+                    <pre class="text-left">
+var answer1 = "It's alright";
+var answer2 = "He is called 'Johnny'";
+var answer3 = 'He is called "Johnny"';</pre>
+                    </p>
+                </li>
+
+                <li>Escape Character
+
+                    <p class="text-left">
+                        Because strings must be written within quotes, JavaScript will misunderstand this string:
+                        The string will be chopped to "We are the so-called ".
+
+
+                    <table class="table">
+                        <tbody><tr>
+                            <th width="25%">Code</th>
+                            <th>Result</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>\'</td>
+                            <td>'</td>
+                            <td>Single quote</td>
+                        </tr>
+                        <tr>
+                            <td>\"</td>
+                            <td>"</td>
+                            <td>Double quote</td>
+                        </tr>
+                        <tr>
+                            <td>\\</td>
+                            <td>\</td>
+                            <td>Backslash</td>
+                        </tr>
+                        </tbody></table>
+
+                    <pre class="text-left">
+var x = "We are the so-called "Vikings" from the north.";
+Output: We are the so-called "Vikings" from the north.
+
+var x = 'It\'s alright.';
+Output: It's alright.
+
+var x = "The character \\ is called backslash.";
+Output: The character \ is called backslash.
+                    </pre>
+                    </p>
+                </li>
+
+
+
+                <li>String characters limit
+
+                    <p class="text-left">
+                        No, there is no limit for the string length (as long as it fits into memory), and your implementation
+                    </p>
+                </li>
+
+                <li>Breaking Long Code Lines
+
+
+                    <p class="text-left">
+                        You can also break up a code line within a text string with a single backslash:
+                    </p>
+                    <pre>
+document.getElementById("demo").innerHTML =
+"Hello Dolly!";
+
+document.getElementById("demo").innerHTML = "Hello \
+Dolly!";
+
+document.getElementById("demo").innerHTML = "Hello " +
+"Dolly!";
+
+                    </pre>
+
+
+
+
+
+                </li>
+
+                <li>Strings Can be Objects
+
+                    <p class="text-left">
+                        Normally, JavaScript strings are primitive values, created from literals:
+
+                        But strings can also be defined as objects with the keyword new:
+
+
+                    </p>
+                    <pre>
+var x = "John";
+var y = new String("John");
+
+// typeof x will return string
+// typeof y will return object
+
+                    </pre>
+
+
+                </li>
+
+
+            </ul>
+
+
+            <hr>
+            <h2>JavaScript String Methods</h2>
+            <p>Primitive values, like "John Doe", cannot have properties or methods (because they are not objects). But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+
+
+
+            </p>
+
+            <h3 class="mb-3 mt-5 text-secondary">Property: .length</h3>
+            <p>The length property returns the length of a string:
+            </p>
+            <pre>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+
+Output: 26
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .indexOf()</h3>
+            <p>The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+                JavaScript counts positions from zero. 0 is the first position in a string, 1 is the second, 2 is the third ...
+                Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+                indexOf methods accept a second parameter as the starting position for the search:
+
+
+
+
+
+            </p>
+            <pre>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+
+Output: 7
+            </pre>
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .lastIndexOf()</h3>
+            <p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+                Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+                indexOf methods accept a second parameter as the starting position for the search:
+
+
+
+            </p>
+            <pre>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");
+
+Output: 21
+            </pre>
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .search()</h3>
+            <p>The search() method searches a string for a specified value and returns the position of the match:
+            </p>
+            <pre>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+
+Output: 7
+            </pre>
+
+
+            The two methods are NOT equal. These are the differences:
+
+            The search() method cannot take a second start position argument.
+            The indexOf() method cannot take powerful search values (regular expressions).
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .slice(start, end)</h3>
+            <p>slice() extracts a part of a string and returns the extracted part in a new string. The method takes 2 parameters: the start position, and the end position (end not included).
+
+
+
+
+            </p>
+            <pre>
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+
+Output: Banana
+            </pre>
+<p>If a parameter is negative, the position is counted from the end of the string.
+
+</p>
+
+            <pre>
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(-12, -6);
+
+Output: Banana
+            </pre>
+
+
+            <p>If you omit the second parameter, the method will slice out the rest of the string:
+
+            </p>
+
+            <pre>
+var res = str.slice(7);
+
+
+Output: Banana, Kiwi
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .substring(start, end)</h3>
+            <p>substring() is similar to slice(). The difference is that substring() cannot accept negative indexes.
+
+            </p>
+            <pre>
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+
+
+Output: Banana
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .substr(start, length)</h3>
+            <p>substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part.
+
+
+
+
+
+            </p>
+            <pre>
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+
+
+Output: Banana
+            </pre>
+
+            <p>If you omit the second parameter, substr() will slice out the rest of the string.
+
+            </p>
+
+            <pre>
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7);
+
+
+Output: Banana, Kiwi
+
+            </pre>
+
+
+            <p>If the first parameter is negative, the position counts from the end of the string.
+
+
+
+            </p>
+
+            <pre>
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(-4);
+
+
+Output: Kiwi
+
+            </pre>
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .replace(old, new)</h3>
+            <p>The replace() method replaces a specified value with another value in a string:
+            </p>
+            <pre>
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+
+
+Output: Kiwi
+
+            </pre>
+
+            The replace() method does not change the string it is called on. It returns a new string.
+            By default, the replace() method replaces only the first match:
+            By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .toUpperCase()</h3>
+            <p>A string is converted to upper case with toUpperCase():
+            </p>
+
+            <pre>
+var text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+
+Output: HELLO WORLD!
+
+            </pre>
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .toLowerCase()</h3>
+            <p>A string is converted to lower case with toLowerCase():
+            </p>
+
+
+
+            <pre>
+var text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase();  // text2 is text1 converted to lower
+
+Output: hello world!
+
+            </pre>
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .concat()</h3>
+            <p>concat() joins two or more strings:
+            <pre>
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+
+Output: Hello World!
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .trim()</h3>
+            <p>The trim() method removes whitespace from both sides of a string:
+            </p>
+
+            <pre>
+var str = "       Hello World!        ";
+alert(str.trim());
+
+Output: Hello World!
+            </pre>
+
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .charAt()</h3>
+            <p>The charAt() method returns the character at a specified index (position) in a string:
+
+
+
+
+            <pre>
+var str = "HELLO WORLD";
+str.charAt(0);
+
+Output: H
+            </pre>
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .charCodeAt()</h3>
+            <p>The charCodeAt() method returns the unicode of the character at a specified index in a string:
+            </p>
+            <pre>
+var str = "HELLO WORLD";
+
+str.charCodeAt(0);
+
+Output: 72
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .fromCharCode()</h3>
+            <p>The fromCharCode() method converts Unicode values into characters.
+
+
+            </p>
+            <pre>
+var res = String.fromCharCode(65);
+
+
+Output: A
+            </pre>
+
+
+
+
+
+
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .split()</h3>
+            <p>A string can be converted to an array with the split() method:
+            </p>
+
+
+            <pre>
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+
+Output: 72
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .startsWith()</h3>
+            <p>The startsWith() method determines whether a string begins with the characters of a specified string.
+
+                Check if a string starts with "Hello":
+
+            </p>
+
+            <pre>
+var str = "Hello world, welcome to the universe.";
+var n = str.startsWith("Hello");
+
+Output: true
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .endsWith()</h3>
+            <p>The endsWith() method determines whether a string ends with the characters of a specified string.
+
+                Check if a string ends with "universe.":</p>
+
+            <pre>
+var str = "Hello world, welcome to the universe.";
+var n = str.endsWith("universe.");
+
+Output: true
+            </pre>
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .includes()</h3>
+            <p>The includes() method determines whether a string contains the characters of a specified string.</p>
+
+            <pre>
+var str = "Hello world, welcome to the universe.";
+var n = str.includes("world");
+
+Output: true
+            </pre>
+
+
+
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .repeat(count)</h3>
+            <p>Make a new string by copying a string twice:
+
+            </p>
+
+            <pre>
+var str = "Hello world!";
+str.repeat(2);
+
+Output: Hello world!Hello world!
+
+
+            </pre>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .localeCompare()</h3>
+            <p>The localeCompare() method compares two strings in the current locale(language).
+
+
+
+            </p>
+
+            <pre>
+var str1 = "ab";
+var str2 = "cd";
+var n = str1.localeCompare(str2);
+
+Output: Hello world!Hello world!
+
+
+            </pre>
+
+
+
+
+            <h2>Home work</h2>
+
+            <ul>
+                <li>lexicographic order</li>
+            </ul>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

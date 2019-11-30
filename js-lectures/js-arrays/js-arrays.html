@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js Array</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="my-5">JavaScript Array</h2>
+
+            <h3 class="mb-3 mt-5 text-secondary">What is Array?</h3>
+            <ul>
+                <li>An array is a data structure that contains a group of elements. Typically these elements are all of the same data type, such as an integer or string. </li>
+                <li>When there is a need to use many variables then There is a big problem because we will Conflict with name of variables So that in this Situation where we wants to Operate on many numbers then we can use array . The Number of Variables also increases the complexity of the Program. So that we uses Arrays.</li>
+
+            </ul>
+
+            <h3 class="mb-3 mt-5 text-secondary">How to create/write Array?</h3>
+            <p>There are two syntaxes for creating an empty array:</p>
+
+<pre><code>let arr = new Array();
+var cars = new Array("Apple", "Orange", "Plum");
+
+let arr = [];
+let fruits = ["Apple", "Orange", "Plum"];
+</code></pre>
+
+            <h3 class="mb-3 mt-5 text-secondary">Write the right way</h3>
+
+            <ul>
+                <li>Array elements are numbered, starting with zero. We can get an element by its number in square brackets:
+                    <p>
+                        <pre>
+let fruits = ["Apple", "Orange", "Plum"];
+
+console.log( fruits[0] ); // output: Apple
+console.log( fruits[1] ); // output: Orange
+console.log( fruits[2] ); // output: Plum</pre>
+                    </p>
+                </li>
+                <li>We can replace an element:
+
+                    <p class="text-left">
+                        <pre class="text-left">
+let fruits = ["Apple", "Orange", "Plum"];
+fruits[2] = 'Pear'; // now ["Apple", "Orange", "Pear"]
+
+</pre>
+                    </p>
+                </li>
+
+
+                <li>…Or add a new one to the array:
+
+
+
+                    <p class="text-left">
+                    <pre class="text-left">
+fruits[3] = 'Lemon'; // now ["Apple", "Orange", "Pear", "Lemon"]
+
+</pre>
+                    </p>
+                </li>
+
+                <li>Trailing comma
+
+
+                    <p class="text-left">
+                        An array, just like an object, may end with a comma: The “trailing comma” style makes it easier to insert/remove items, because all lines become alike.
+                    </p>
+
+                    <pre class="text-left">
+let fruits = [
+  "Apple",
+  "Orange",
+  "Plum", //<
+];
+
+                    </pre>
+
+                </li>
+
+
+
+                <li>Arrays are Objects
+
+                    <p class="text-left">
+                        Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+                        Arrays use numbers to access its "elements". In this example, person[0] returns John:
+                        Objects use names to access its "members". In this example, person.firstName returns John:
+
+                    </p>
+
+                    <pre>
+var person = ["John", "Doe", 46];
+var person = {firstName:"John", lastName:"Doe", age:46};
+
+
+                    </pre>
+
+                </li>
+
+                <li>Array Elements Can Be Objects
+
+
+
+                    <p class="text-left">
+                        JavaScript variables can be objects. Arrays are special kinds of objects.
+
+                    </p>
+
+                    <pre>
+var person = ["John", "Doe", 46];
+var person = {firstName:"John", lastName:"Doe", age:46};
+
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+
+                    </pre>
+
+
+
+
+                </li>
+
+
+
+            </ul>
+
+
+            <hr>
+
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
