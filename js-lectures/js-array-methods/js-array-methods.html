@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js Array Methods</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <h2 class="my-5">JavaScript Array Methods</h2>
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .toString</h3>
+            <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+
+            <pre>
+var fruits = ["First Name", "Last Name"];
+document.getElementById("toString").innerHTML = name.toString();
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="toString"></div>
+            <script>
+                var name = ["First Name", "Last Name"];
+                document.getElementById("toString").innerHTML = name.toString();
+            </script>
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .join</h3>
+            <p>The join() method also joins all array elements into a string. It behaves just like toString(), but in addition you can specify the separator:</p>
+
+            <pre>
+var fruits = ["First Name", "Last Name"];
+document.getElementById("result-join").innerHTML = name.join(" * ");
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-join"></div>
+            <script>
+                var arrayName = ["First Name", "Last Name"];
+                document.getElementById("result-join").innerHTML = arrayName.join(" - ");
+            </script>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .pop</h3>
+            <p>The pop() method removes the last element from an array, The pop() method returns the value that was "popped out":</p>
+
+            <pre>
+var arrayName = ["First Name",  "Middle name", "Last Name"];
+values = arrayName.pop();
+document.getElementById("result-pop").innerHTML = arrayName.join(" - ");
+document.getElementById("result-pop-return").innerHTML = values;
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-pop"></div>
+            <div class="" id="result-pop-return"></div>
+            <script>
+                var arrayName = ["First Name",  "Middle name", "Last Name"];
+                values = arrayName.pop();
+                document.getElementById("result-pop").innerHTML = arrayName.join(" - ");
+                document.getElementById("result-pop-return").innerHTML = values;
+
+
+            </script>
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .push</h3>
+            <p>The push() method adds a new element to an array (at the end), The push() method returns the new array length:</p>
+
+            <pre>
+var arrayName = ["First Name",  "Middle name"];
+
+document.getElementById("result-push").innerHTML = arrayName.join(" - ");
+document.getElementById("result-push-return").innerHTML = values;
+
+new_values = arrayName.push('Last name');
+document.getElementById("result-push-new").innerHTML = arrayName.join(" - ");
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-push"></div>
+            <div class="" id="result-push-new"></div>
+
+            <script>
+                var arrayName = ["First Name",  "Middle name"];
+
+                document.getElementById("result-push").innerHTML = arrayName.join(" - ");
+
+                new_values = arrayName.push('Last name');
+                document.getElementById("result-push-new").innerHTML = arrayName.join(" - ");
+
+
+
+            </script>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .shift</h3>
+            <p>Shifting is equivalent to popping, working on the first element instead of the last. The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+
+            <pre>
+var arrayName = ["First Name",  "Middle name", "Last name"];
+document.getElementById("result-shift").innerHTML = arrayName.join(" - ");
+
+new_values = arrayName.shift();
+document.getElementById("result-shift-new").innerHTML = arrayName.join(" - ");
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-shift"></div>
+            <div class="" id="result-shift-new"></div>
+
+            <script>
+                var arrayName = ["First Name",  "Middle name", "Last name"];
+                document.getElementById("result-shift").innerHTML = arrayName.join(" - ");
+
+                new_values = arrayName.shift();
+                document.getElementById("result-shift-new").innerHTML = arrayName.join(" - ");
+
+
+
+            </script>
+
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .unshift</h3>
+            <p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:</p>
+
+            <pre>
+var arrayName = ["First Name",  "Middle name", "Last name"];
+document.getElementById("result-unshift").innerHTML = arrayName.join(" - ");
+
+new_values = arrayName.shift();
+document.getElementById("result-unshift-new").innerHTML = arrayName.join(" - ");
+
+new_values = arrayName.unshift('First name');
+document.getElementById("result-unshift-final").innerHTML = arrayName.join(" - ");
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-unshift"></div>
+            <div class="" id="result-unshift-new"></div>
+            <div class="" id="result-unshift-final"></div>
+
+
+            <script>
+                var arrayName = ["First Name",  "Middle name", "Last name"];
+                document.getElementById("result-unshift").innerHTML = arrayName.join(" - ");
+
+                new_values = arrayName.shift();
+                document.getElementById("result-unshift-new").innerHTML = arrayName.join(" - ");
+
+                new_values = arrayName.unshift('First name');
+                document.getElementById("result-unshift-final").innerHTML = arrayName.join(" - ");
+
+
+            </script>
+
+
+
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .splice</h3>
+            <p>The splice() method can be used to add new items to an array: The splice() method returns an array with the deleted items:
+            </p>
+            <P>
+                The first parameter (2) defines the position where new elements should be added (spliced in).
+
+                The second parameter (0) defines how many elements should be removed.
+
+                The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+            </P>
+
+
+            <pre>
+var arrayName = ["First Name",  "Middle name", "Last name"];
+arrayName.splice(2, 0, "Age", "Gender");
+
+document.getElementById("result-splice").innerHTML = arrayName.join(" - ");
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-splice"></div>
+
+
+            <script>
+                var arrayName = ["First Name",  "Middle name", "Last name"];
+                arrayName.splice(1, 0, "Age", "Gender");
+
+                document.getElementById("result-splice").innerHTML = arrayName.join(" - ");
+
+
+
+
+            </script>
+
+
+
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .concat</h3>
+            <p>The concat() method creates a new array by merging (concatenating) existing arrays, The concat() method does not change the existing arrays. It always returns a new array.
+
+            </p>
+
+            <pre>
+var arrayName = ["First Name",  "Middle name", "Last name"];
+arrayName.splice(2, 0, "Age", "Gender");
+
+document.getElementById("result-splice").innerHTML = arrayName.join(" - ");
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-concat"></div>
+
+
+            <script>
+                var arrayName = ["First Name",  "Middle name", "Last name"];
+                var userData = ["Age", "Gender"];
+                var userDataAll = arrayName.concat(userData);   // Concatenates (joins) myGirls and myBoys
+
+                document.getElementById("result-concat").innerHTML = userDataAll.join(" - ");
+
+
+
+
+            </script>
+
+
+            <h3 class="mb-3 mt-5 text-secondary">Method: .slice</h3>
+            <p>The slice() method slices out a piece of an array into a new array. The slice() method creates a new array. It does not remove any elements from the source array.
+
+
+
+
+
+            </p>
+
+            <pre>
+var arrayName = ["First Name",  "Middle name", "Last name", "Age", "Gender"];
+var userData = arrayName.slice(2);
+
+document.getElementById("result-slice").innerHTML = userData.join(" - ");
+            </pre>
+
+            <p>Result: </p>
+            <div class="" id="result-slice"></div>
+
+
+            <script>
+                var arrayName = ["First Name",  "Middle name", "Last name", "Age", "Gender"];
+                var userData = arrayName.slice(2);
+
+                document.getElementById("result-slice").innerHTML = userData.join(" - ");
+
+
+
+
+            </script>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
